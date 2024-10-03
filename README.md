@@ -17,7 +17,3 @@ Explorations with implementing associative arrays.
 
 This code may be found at <https://github.com/lblancha528/mp-associative-arrays-maven>.
 The starter code and original project can be found at <https://github.com/Grinnell-CSC207/mp-associative-arrays-maven>.
-
-**Notes to Self**
-
-* set() does not !
