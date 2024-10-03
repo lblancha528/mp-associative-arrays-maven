@@ -12,7 +12,7 @@ Explorations with implementing associative arrays.
 **Acknowledgements**
 
 * Tuesday Evening Tutors: Charles and Ishita
-* Wednesday Evening Tutors: Ethan and Boston
+* Wednesday Evening Tutors: Ethan and Boston and Tiffany
 * Wednesday chat with Sarah Deschamps
 
 This code may be found at <https://github.com/lblancha528/mp-associative-arrays-maven>.
