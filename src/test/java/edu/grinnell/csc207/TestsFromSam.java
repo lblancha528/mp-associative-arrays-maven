@@ -26,7 +26,9 @@ public class TestsFromSam {
   public void testSetAndGet() throws Exception {
     AssociativeArray<String, String> aa = 
         new AssociativeArray<String, String>();
+    System.out.println(aa.toString() + "a");
     aa.set("a", "aardvark");
+    System.out.println(aa.toString());
     assertEquals("aardvark", aa.get("a"), "M: We can get what we just set");
   } // testSetAndGet()
 } // class TestsFromSam

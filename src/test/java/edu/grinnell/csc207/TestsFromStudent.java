@@ -12,11 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
+import java.math.BigInteger;
 
 /**
  * A place for you to put your own tests (beyond the shared repo).
  *
- * @author Your Name Here
+ * @author Lily Blanchard
  */
 public class TestsFromStudent {
   /**
@@ -25,4 +26,4 @@ public class TestsFromStudent {
   @Test
   public void alwaysPass() throws Exception {
   } // alwaysPass()
-} // class TestsFromSam
+} // class TestsFrom Student

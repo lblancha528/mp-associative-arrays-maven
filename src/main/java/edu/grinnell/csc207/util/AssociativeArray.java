@@ -9,7 +9,7 @@ import static java.lang.reflect.Array.newInstance;
  * @param <K> the key type
  * @param <V> the value type
  *
- * @author Your Name Here
+ * @author Lily Blanchard
  * @author Samuel A. Rebelsky
  */
 public class AssociativeArray<K, V> {
@@ -82,6 +82,9 @@ public class AssociativeArray<K, V> {
   public String toString() {
     String arrStr = new String("{");
     for (KVPair<K, V> pair : pairs) {
+      if (pair == null) {
+        continue;
+      } // if
       arrStr.concat(pair.toString());
     } // for
     arrStr.concat("}");
@@ -115,14 +118,16 @@ public class AssociativeArray<K, V> {
       // must not exist and must be room
       try {
         int i = 0;
+        // KVPair<K ,V> nullPair = new KVPair<K ,V>();
         for (; i < this.pairs.length; i++) {
-          if (this.pairs[i].key.equals(null)) {
+          if (this.pairs[i] == null) {
             break;
           } // if
         } // for
         this.pairs[i] = new KVPair<K, V>(key, value);
         this.size += 1;
       } catch (Exception KeyNotFoundException) {
+        System.err.println("Fail to set pair.");
       } // try/catch
     } // if
     return;
