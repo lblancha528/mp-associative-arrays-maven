@@ -81,13 +81,19 @@ public class AssociativeArray<K, V> {
    */
   public String toString() {
     String arrStr = new String("{");
+    int count = 0;
     for (KVPair<K, V> pair : pairs) {
       if (pair == null) {
         continue;
       } // if
-      arrStr.concat(pair.toString());
+      if (count < this.size - 1) {
+        arrStr += pair.toString() + ", ";
+        count++;
+      } else {
+        arrStr += pair.toString();
+      } // if
     } // for
-    arrStr.concat("}");
+    arrStr += "}";
     return arrStr;
   } // toString()
 
@@ -104,7 +110,9 @@ public class AssociativeArray<K, V> {
    * @throws NullKeyException If the client provides a null key.
    */
   public void set(K key, V value) throws NullKeyException {
-    if (this.hasKey(key)) {
+    if (key == null) {
+      throw new NullKeyException();
+    } else if (this.hasKey(key)) {
       try {
         int i = find(key);
         pairs[i].val = value;
@@ -217,7 +225,7 @@ public class AssociativeArray<K, V> {
    */
   int find(K key) throws KeyNotFoundException {
     for (int i = 0; i < this.pairs.length; i++) {
-      if (this.pairs[i] == null) {
+      if (this.pairs[i] == null || this.pairs[i].key == null) {
         continue;
       } // if key is null, skip loop
       if (this.pairs[i].key.equals(key)) {
